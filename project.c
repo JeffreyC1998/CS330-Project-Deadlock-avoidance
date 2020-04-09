@@ -46,7 +46,7 @@ void Init()
 void showInfo()
 {
 	int i, j;
-	printf("Current resource remaining：");
+	printf("Current resource remaining: ");
 	for (j = 0; j < resourceNum; j++) {
 		printf("%d ", available[j]);
 	}
@@ -143,13 +143,13 @@ bool isSafe()
 	}
 
 	if (trueFinished == processNum) {
-		printf("\nsystem safe！\n\nThe security sequence is：");
+		printf("\nsystem safe! \n\nThe security sequence is! ");
 		for (i = 0; i < processNum; i++) {
 			printf("%d ", safeSeries[i]);
 		}
 		return true;
 	}
-	printf("******system unsafe！******\n");
+	printf("******system unsafe! ******\n");
 	return false;
 }
 
@@ -158,7 +158,7 @@ int main()
 {
 	int i, j, curProcess;
 	int wheInit = 0;
-	printf("Use built-in data? 0 Yes, 1 No.：");
+	printf("Use built-in data? 0 Yes, 1 No: ");
 	scanf("%d", &wheInit);
 	if (wheInit)
 		Init(); 
@@ -193,7 +193,7 @@ int main()
 				printf("\nSystem security analysis\n");
 				printf(" PID\t Work\t\tNeed\tAllocation\tWork+Allocation\n");
 				if (isSafe()) {
-					printf("allocation success！\n");
+					printf("allocation success! \n");
 					showInfo();
 				}
 				else {
