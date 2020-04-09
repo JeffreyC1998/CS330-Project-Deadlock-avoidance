@@ -46,7 +46,7 @@ void Init()
 void showInfo()
 {
 	int i, j;
-	printf("Current resource remaining£º");
+	printf("Current resource remainingï¼š");
 	for (j = 0; j < resourceNum; j++) {
 		printf("%d ", available[j]);
 	}
@@ -143,13 +143,13 @@ bool isSafe()
 	}
 
 	if (trueFinished == processNum) {
-		printf("\nsystem safe£¡\n\nThe security sequence is£º");
+		printf("\nsystem safeï¼\n\nThe security sequence isï¼š");
 		for (i = 0; i < processNum; i++) {
 			printf("%d ", safeSeries[i]);
 		}
 		return true;
 	}
-	printf("******system unsafe£¡******\n");
+	printf("******system unsafeï¼******\n");
 	return false;
 }
 
@@ -158,10 +158,10 @@ int main()
 {
 	int i, j, curProcess;
 	int wheInit = 0;
-	printf("Use built-in data? 0 Yes, 1 No.£º");
+	printf("Use built-in data? 0 Yes, 1 No.ï¼š");
 	scanf("%d", &wheInit);
 	if (wheInit)
-		Init();  //¿ÉÒÔ²»Ê¹ÓÃ£¬Ñ¡ÓÃÄÚÖÃµÄÊý¾Ý½øÐÐ²âÊÔ
+		Init(); 
 	printf("---------------------------------------------------------\n");
 	showInfo();
 	printf("\nSystem security analysis\n");
@@ -169,20 +169,20 @@ int main()
 	isSafe();
 	while (true) {
 		printf("\n---------------------------------------------------------\n");
-		printf("\nEnter the process to assign£º");
+		printf("\nEnter the process to assign: ");
 		scanf("%d", &curProcess);
-		printf("\nEnter resources to assign to process P%d£º", curProcess);
+		printf("\nEnter resources to assign to process P%d: ", curProcess);
 		for (j = 0; j < resourceNum; j++) {
 			scanf("%d", &request[j]);
 		}
 		for (j = 0; j < resourceNum; j++) {
 			if (request[j] <= need[curProcess][j])continue;
-			else { printf("ERROR£¡\n"); break; }
+			else { printf("ERROR! \n"); break; }
 		}
 		if (j == resourceNum) {
 			for (j = 0; j < resourceNum; j++) {
 				if (request[j] <= need[curProcess][j])continue;
-				else { printf("Insufficient resources, waiting£¡\n"); break; }
+				else { printf("Insufficient resources, waiting! \n"); break; }
 			}
 			if (j == resourceNum) {
 				for (j = 0; j < resourceNum; j++) {
@@ -193,7 +193,7 @@ int main()
 				printf("\nSystem security analysis\n");
 				printf(" PID\t Work\t\tNeed\tAllocation\tWork+Allocation\n");
 				if (isSafe()) {
-					printf("allocation success£¡\n");
+					printf("allocation successï¼\n");
 					showInfo();
 				}
 				else {
@@ -202,7 +202,7 @@ int main()
 						allocation[curProcess][j] -= request[j];
 						need[curProcess][j] += request[j];
 					}
-					printf("allocation failed£¡\n");
+					printf("allocation failed! \n");
 					showInfo();
 				}
 			}
