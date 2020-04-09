@@ -168,7 +168,7 @@ int main()
 	printf(" PID\t Work\t\tNeed\tAllocation\tWork+Allocation\n");
 	isSafe();
 	while (true) 
-	{
+	{ 
 		printf("\n---------------------------------------------------------\n");
 		printf("\nEnter the process to assign: ");
 		scanf("%d", &curProcess);
