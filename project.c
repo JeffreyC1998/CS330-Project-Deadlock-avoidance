@@ -167,12 +167,14 @@ int main()
 	printf("\nSystem security analysis\n");
 	printf(" PID\t Work\t\tNeed\tAllocation\tWork+Allocation\n");
 	isSafe();
-	while (true) {
+	while (true) 
+	{
 		printf("\n---------------------------------------------------------\n");
 		printf("\nEnter the process to assign: ");
 		scanf("%d", &curProcess);
 		printf("\nEnter resources to assign to process P%d: ", curProcess);
-		for (j = 0; j < resourceNum; j++) {
+		for (j = 0; j < resourceNum; j++) 
+		{
 			scanf("%d", &request[j]);
 		}
 		for (j = 0; j < resourceNum; j++) {
