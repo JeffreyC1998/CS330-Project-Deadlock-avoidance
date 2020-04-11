@@ -170,9 +170,9 @@ int main()
 	while (true) 
 	{ 
 		printf("\n---------------------------------------------------------\n");
-		printf("\nEnter the process to assign (999 to exit): ");
+		printf("\nEnter the process to allocate (999 to exit): ");
 		scanf("%d", &curProcess);
-		printf("\nEnter resources to assign to process P%d: ", curProcess);
+		printf("\nEnter resources to allocate to process P%d: ", curProcess);
 		if (curProcess == 999)
 			break;
 		for (j = 0; j < resourceNum; j++) 
