@@ -24,6 +24,7 @@ Then the system will show you safety sequence
 Enter the process which you want to allocate, such as 1
 Enter the resource which you want to allocate to process, such as 1 0 2  
 then the program will analysis safe or not  
+for more instruction, please check test.log file  
 
 If the process cusneed requests REQUEST  [i], the banker algorithm will judge according to the following rules.
 
