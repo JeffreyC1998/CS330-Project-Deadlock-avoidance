@@ -143,7 +143,7 @@ bool isSafe()
 	}
 
 	if (trueFinished == processNum) {
-		printf("\nsystem safe! \n\nThe security sequence is! ");
+		printf("\nsystem safe! \n\nThe safe sequence is! ");
 		for (i = 0; i < processNum; i++) {
 			printf("%d ", safeSeries[i]);
 		}
@@ -164,7 +164,7 @@ int main()
 		Init(); 
 	printf("---------------------------------------------------------\n");
 	showInfo();
-	printf("\nSystem security analysis\n");
+	printf("\nSystem safety analysis\n");
 	printf(" PID\t Work\t\tNeed\tAllocation\tWork+Allocation\n");
 	isSafe();
 	while (true) 
@@ -194,7 +194,7 @@ int main()
 					allocation[curProcess][j] += request[j];
 					need[curProcess][j] -= request[j];
 				}
-				printf("\nSystem security analysis\n");
+				printf("\nSystem safety analysis\n");
 				printf(" PID\t Work\t\tNeed\tAllocation\tWork+Allocation\n");
 				if (isSafe()) {
 					printf("allocation success! \n");
