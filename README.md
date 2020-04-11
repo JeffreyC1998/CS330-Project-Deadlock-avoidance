@@ -18,6 +18,13 @@ The basic idea of banker algorithm is to judge whether the system is safe before
 The challenge is to find the algorithm and implement it with c language. To find the appropriate algorithm, a lot of resources are needed and select to the appropriate one.
 
 # Instruction
+
+If you want to use built-in data, enter 0  
+Then the system will show you safety sequence  
+Enter the process which you want to allocate, such as 1
+Enter the resource which you want to allocate to process, such as 1 0 2  
+then the program will analysis safe or not  
+
 If the process cusneed requests REQUEST  [i], the banker algorithm will judge according to the following rules.
 
 (1) If REQUEST  [cusneed] [i] < = NEED [cusneed] [i], turn to (2); otherwise, an error occurs.  
