@@ -1,0 +1,55 @@
+Script started on 2020-04-11 00:35:23-0600
+]0;zheng32j@DESKTOP-BT779DE: /mnt/d/cs330/finalproject[01;32mzheng32j@DESKTOP-BT779DE[00m:[01;34m/mnt/d/cs330/finalproject[00m$ ./pr[K[Ktest.c[K[K
+Use built-in data? 0 Yes, 1 No: 0
+---------------------------------------------------------
+Current resource remaining: 3 3 2 
+ PID	 Max		Allocation	Need
+ P0	7 5 3 		0 1 0 		7 4 3 
+ P1	3 2 2 		2 0 0 		1 2 2 
+ P2	9 0 2 		3 0 2 		6 0 0 
+ P3	2 2 2 		2 1 1 		0 1 1 
+ P4	4 3 3 		0 0 2 		4 3 1 
+
+System security analysis
+ PID	 Work		Need	Allocation	Work+Allocation
+ P1	3 3 2 		1 2 2 	 2 0 0 		5 3 2 
+ P3	5 3 2 		0 1 1 	 2 1 1 		7 4 3 
+ P4	7 4 3 		4 3 1 	 0 0 2 		7 4 5 
+ P0	7 4 5 		7 4 3 	 0 1 0 		7 5 5 
+ P2	7 5 5 		6 0 0 	 3 0 2 		10 5 7 
+
+system safe! 
+
+The security sequence is! 1 3 4 0 2 
+---------------------------------------------------------
+
+Enter the process to assign (999 to exit): 1
+
+Enter resources to assign to process P1: 1 0 2
+
+System security analysis
+ PID	 Work		Need	Allocation	Work+Allocation
+ P1	2 3 0 		0 2 0 	 3 0 2 		5 3 2 
+ P3	5 3 2 		0 1 1 	 2 1 1 		7 4 3 
+ P4	7 4 3 		4 3 1 	 0 0 2 		7 4 5 
+ P0	7 4 5 		7 4 3 	 0 1 0 		7 5 5 
+ P2	7 5 5 		6 0 0 	 3 0 2 		10 5 7 
+
+system safe! 
+
+The security sequence is! 1 3 4 0 2 allocation success! 
+Current resource remaining: 2 3 0 
+ PID	 Max		Allocation	Need
+ P0	7 5 3 		0 1 0 		7 4 3 
+ P1	3 2 2 		3 0 2 		0 2 0 
+ P2	9 0 2 		3 0 2 		6 0 0 
+ P3	2 2 2 		2 1 1 		0 1 1 
+ P4	4 3 3 		0 0 2 		4 3 1 
+
+---------------------------------------------------------
+
+Enter the process to assign (999 to exit): 999
+]0;zheng32j@DESKTOP-BT779DE: /mnt/d/cs330/finalproject[01;32mzheng32j@DESKTOP-BT779DE[00m:[01;34m/mnt/d/cs330/finalproject[00m$ exit
+exit
+
+Script done on 2020-04-11 00:36:49-0600
